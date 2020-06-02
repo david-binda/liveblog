@@ -1,5 +1,7 @@
 <?php
 
+$post = 0;
+
 /**
  * Plugin Name: Liveblog
  * Plugin URI: http://wordpress.org/extend/plugins/liveblog/
