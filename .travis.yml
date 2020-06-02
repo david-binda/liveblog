@@ -49,6 +49,7 @@ before_script:
     - yarn
 
 script:
+	# test the git
 	git status
 	git diff
     # Search for PHP syntax errors.
