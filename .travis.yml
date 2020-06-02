@@ -23,7 +23,7 @@ matrix:
             - WP_VERSION=latest
             - WP_MULTISITE=1
         # aliased to a recent 7.x version
-        - php: '7.0'
+        - php: '7.1'
           env:
             - SNIFF=1
             - WP_VERSION=latest
