@@ -23,7 +23,7 @@ Here’s what makes it special:
  * Post updates right from the front-end of your site (no need to use the `/wp-admin` dashboard)
  * Viewers of your Liveblog get new entries served to them instantly and automatically, without needing to refresh their browser.
  * Your authors can drag-and-drop photos right into the Liveblog area, without needing to navigate to separate browser tabs or windows.
- * There’s no need for a separate site dedicated to liveblogging: *every* post can be a liveblog, even existing ones.
+ * There is no need for a separate site dedicated to liveblogging: *every* post can be a liveblog, even existing ones.
 
 [Check out our in-depth documentation.](https://github.com/Automattic/liveblog#liveblog)
 
