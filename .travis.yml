@@ -42,11 +42,13 @@ before_script:
     - if [[ "$SNIFF" == "1" ]]; then git clone -b master --depth 1 https://github.com/automattic/VIP-Coding-Standards.git $SNIFFS_DIR/VIP-Coding-Standards; fi
     # Install VariableAnalysis Standard.
     - if [[ "$SNIFF" == "1" ]]; then git clone -b master --depth 1 https://github.com/sirbrillig/phpcs-variable-analysis.git $SNIFFS_DIR/VariableAnalysis; fi
+    # Install PHPCSUtils Standard.
+    - if [[ "$SNIFF" == "1" ]]; then git clone -b master --depth 1 https://github.com/PHPCSStandards/PHPCSUtils.git $SNIFFS_DIR/PHPCSUtils; fi
     # Install PHP Compatibility sniffs.
     - if [[ "$SNIFF" == "1" ]]; then git clone -b master --depth 1 https://github.com/wimg/PHPCompatibility.git $SNIFFS_DIR/PHPCompatibility; fi
     # Set install path for PHPCS sniffs.
     # @link https://github.com/squizlabs/PHP_CodeSniffer/blob/4237c2fc98cc838730b76ee9cee316f99286a2a7/CodeSniffer.php#L1941
-    - if [[ "$SNIFF" == "1" ]]; then $PHPCS_DIR/bin/phpcs --config-set installed_paths $SNIFFS_DIR,$SNIFFS_DIR/VIP-Coding-Standards,$SNIFFS_DIR/VariableAnalysis; fi
+    - if [[ "$SNIFF" == "1" ]]; then $PHPCS_DIR/bin/phpcs --config-set installed_paths $SNIFFS_DIR,$SNIFFS_DIR/VIP-Coding-Standards,$SNIFFS_DIR/VariableAnalysis,$SNIFFS_DIR/PHPCSUtils; fi
     # After CodeSniffer install you should refresh your path.
     - if [[ "$SNIFF" == "1" ]]; then phpenv rehash; fi
     # Install the PHPCS-changed
