@@ -70,7 +70,7 @@ script:
     # -n flag: Do not print warnings. (shortcut for --warning-severity=0)
     # --standard: Use WordPress as the standard.
     # --extensions: Only sniff PHP files.
-    - if [[ "$SNIFF" == "1" ]] && [[ "$TRAVIS_PULL_REQUEST" != "false" ]]; then /tmp/phpcs-changed/bin/phpcs-changed --git --git-branch "$TRAVIS_BRANCH" --standard="WordPress-VIP-Go" --extensions=php .; fi
+    - if [[ "$SNIFF" == "1" ]] && [[ "$TRAVIS_PULL_REQUEST" != "false" ]]; then /tmp/phpcs-changed/bin/phpcs-changed --git --git-branch "$TRAVIS_BRANCH" --standard="WordPress-VIP-Go" --extensions=php ./wpcom-helper.php; fi
     # Run unit tests
     - phpunit
     # Run linting
