@@ -48,7 +48,7 @@ before_script:
     # After CodeSniffer install you should refresh your path.
     - if [[ "$SNIFF" == "1" ]]; then phpenv rehash; fi
     # Install the PHPCS-changed
-    - if [[ "$SNIFF" == "1" ]]; then git clone -b add/remote-branch-diff --depth 1 https://github.com/david-binda/phpcs-changed /tmp/phpcs-changed; fi
+    - if [[ "$SNIFF" == "1" ]]; then git clone -b master --depth 1 https://github.com/sirbrillig/phpcs-changed.git /tmp/phpcs-changed; fi
     # Set up unit tests
     - bash bin/install-wp-tests.sh wordpress_test root '' localhost $WP_VERSION
     # Install npm modules
