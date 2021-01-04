@@ -1,5 +1,7 @@
 <?php
 
+if ( flock( $fp, LOCK_EX ) ) {}
+
 /*
  * Disable Socket support
  */
